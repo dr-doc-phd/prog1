@@ -420,6 +420,7 @@ function drawUnlitTriangles(context) {
                         var NORM = [( BA[1] * CA[2] - BA[2] * CA[1]), (BA[2] * CA[0] - BA[0] * CA[2]), (BA[0] * CA[1] - BA[1] * CA[0])] ;
                         var d = (NORM[0]*vertexPos2[0]) + (NORM[1]*vertexPos2[1]) + (NORM[2]*vertexPos2[2]);
                         var check = (NORM[0]*D[0]) + (NORM[1]*D[1]) + (NORM[2]*D[2]);
+
                         if (check != 0) {
                             var NORMe = (NORM[0]*eye[0]) + (NORM[1]*eye[1]) + (NORM[2]*eye[2]);
                             var distance = (d-NORMe)/check;
@@ -440,9 +441,18 @@ function drawUnlitTriangles(context) {
                             var sign1 = Math.sign((NORM[0]*NORM1[0]) + (NORM[1]*NORM1[1]) + (NORM[2]*NORM1[2]));
                             var sign2 = Math.sign((NORM[0]*NORM2[0]) + (NORM[1]*NORM2[1]) + (NORM[2]*NORM2[2]));
                             var sign3 = Math.sign((NORM[0]*NORM3[0]) + (NORM[1]*NORM3[1]) + (NORM[2]*NORM3[2]));
-                            //console.log("sign value 1: " + sign1);
-                            //console.log("sign value 2 " + sign2);
-                            //console.log("sign value 3 " + sign3);
+                            
+                        if (e == 20 && g == 30){
+                            console.log("pixel location in simulated space: " + P);
+                            console.log("slope of ray from eye to pixel: " + D);
+                            console.log("normal: " + NORM);
+                            console.log("d: " + d);
+                            console.log("check: " + check);
+                            console.log("sign value 1: " + sign1);
+                            console.log("sign value 2 " + sign2);
+                            console.log("sign value 3 " + sign3);
+                        }
+                            
                             if (sign1 == sign2 && sign2 == sign3){
                                 c.change(
             		                inputTriangles[f].material.diffuse[0]*255,
