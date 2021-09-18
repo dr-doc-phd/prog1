@@ -1,5 +1,6 @@
 /* classes */ 
-
+import { dot } from 'mathjs'
+import { cross } from 'mathjs'
 // Color constructor
 class Color {
     constructor(r,g,b,a) {
