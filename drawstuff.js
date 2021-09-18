@@ -442,16 +442,16 @@ function drawUnlitTriangles(context) {
                             var sign2 = Math.sign((NORM[0]*NORM2[0]) + (NORM[1]*NORM2[1]) + (NORM[2]*NORM2[2]));
                             var sign3 = Math.sign((NORM[0]*NORM3[0]) + (NORM[1]*NORM3[1]) + (NORM[2]*NORM3[2]));
                             
-                        if (e == 20 && g == 30){
-                            console.log("pixel location in simulated space: " + P);
-                            console.log("slope of ray from eye to pixel: " + D);
-                            console.log("normal: " + NORM);
-                            console.log("d: " + d);
-                            console.log("check: " + check);
-                            console.log("sign value 1: " + sign1);
-                            console.log("sign value 2 " + sign2);
-                            console.log("sign value 3 " + sign3);
-                        }
+                            if (e == 20 && g == 30){
+                                console.log("pixel location in simulated space: " + P);
+                                console.log("slope of ray from eye to pixel: " + D);
+                                console.log("normal: " + NORM);
+                                console.log("d: " + d);
+                                console.log("check: " + check);
+                                console.log("sign value 1: " + sign1);
+                                console.log("sign value 2 " + sign2);
+                                console.log("sign value 3 " + sign3);
+                            }
                             
                             if (sign1 == sign2 && sign2 == sign3){
                                 c.change(
